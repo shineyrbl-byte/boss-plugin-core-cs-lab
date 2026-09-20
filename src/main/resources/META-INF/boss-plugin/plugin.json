@@ -21,6 +21,11 @@
             "name": "mcp__com_example_core_cs_lab__check_schedule",
             "description": "Checks whether a database transaction schedule is conflict-serializable",
             "adminOnly": false
+        },
+        {
+            "name": "mcp__com_example_core_cs_lab__detect_deadlock",
+            "description": "Detects deadlock in a sequence of lock requests using a wait-for graph",
+            "adminOnly": false
         }
     ]
 }
