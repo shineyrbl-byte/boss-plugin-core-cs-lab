@@ -40,6 +40,29 @@ How it works: requests are processed in order. A request is granted when it is c
 
 Assumptions: locks are never released during the sequence, a transaction that is waiting issues no further requests (they are ignored), and a transaction that already holds a lock on an item can request a stronger one (an upgrade), which waits if another transaction holds a lock on that item.
 
+### check_recoverability
+
+Classifies a transaction schedule with commits as strict, cascadeless, recoverable or not recoverable.
+
+Tool name in BOSS: `mcp__com_example_core_cs_lab__check_recoverability`
+
+Input: `schedule`, operations separated by spaces. R = read, W = write, C = commit, the number is the transaction, the letter is the data item.
+
+    W1(X) R2(X) C1 C2
+
+Output is JSON:
+
+    {"level":"recoverable","recoverable":true,"cascadeless":false,"strict":false,"readsFrom":[{"reader":2,"writer":1,"item":"X"}],"violations":[{"type":"dirty_read","txn":2,"dependsOn":1,"item":"X"}]}
+
+How it works: the schedule is scanned in order while tracking who last wrote each item and which transactions have committed. The levels nest: every strict schedule is cascadeless, and every cascadeless schedule is recoverable.
+
+- Reads from: Tj reads the value last written by a different transaction Ti.
+- Recoverable: whenever Tj reads from Ti and Tj commits, Ti must have committed first. Violation type `commit_before_source`.
+- Cascadeless: transactions only read data written by committed transactions. Violation type `dirty_read`.
+- Strict: transactions neither read nor overwrite data written by uncommitted transactions. Violation type `dirty_overwrite`.
+
+Assumptions: the input has no aborts, a transaction with no commit is treated as still running, and a transaction cannot act after it commits.
+
 ### lab_ping
 
 A connectivity check that confirms the plugin is loaded.

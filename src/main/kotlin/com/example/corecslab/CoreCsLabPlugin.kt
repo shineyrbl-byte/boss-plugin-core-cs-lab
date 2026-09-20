@@ -38,6 +38,7 @@ class CoreCsLabPlugin : Plugin {
                         ),
                         CheckScheduleTool.definition(),
                         DetectDeadlockTool.definition(),
+                        CheckRecoverabilityTool.definition(),
                     )
             }
         toolProvider = provider

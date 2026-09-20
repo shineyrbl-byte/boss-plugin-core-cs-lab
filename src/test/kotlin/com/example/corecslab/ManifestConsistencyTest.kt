@@ -15,6 +15,7 @@ class ManifestConsistencyTest {
             "mcp__com_example_core_cs_lab__lab_ping",
             CheckScheduleTool.NAME,
             DetectDeadlockTool.NAME,
+            CheckRecoverabilityTool.NAME,
         )
         for (name in names) {
             assertTrue(manifest.contains("\"$name\""), "Manifest is missing $name")
