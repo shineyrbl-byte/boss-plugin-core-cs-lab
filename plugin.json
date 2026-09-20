@@ -1,0 +1,26 @@
+{
+    "pluginId": "com.example.core-cs-lab",
+    "displayName": "core-cs-lab",
+    "version": "0.1.0",
+    "apiVersion": "1.0.93",
+    "mainClass": "com.example.corecslab.CoreCsLabPlugin",
+    "description": "BossConsole plugin for core-cs-lab (mcp-tool template)",
+    "author": "Boss Developer",
+    "license": "Apache-2.0",
+    "manifestVersion": 1,
+    "systemPlugin": false,
+    "canUnload": true,
+    "requiredPermissions": [],
+    "mcpTools": [
+        {
+            "name": "mcp__com_example_core_cs_lab__lab_ping",
+            "description": "Simple connectivity test for the Core CS Lab plugin",
+            "adminOnly": false
+        },
+        {
+            "name": "mcp__com_example_core_cs_lab__check_schedule",
+            "description": "Checks whether a database transaction schedule is conflict-serializable",
+            "adminOnly": false
+        }
+    ]
+}
