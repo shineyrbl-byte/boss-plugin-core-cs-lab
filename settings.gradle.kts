@@ -1,1 +1,1 @@
-rootProject.name = "com.example.core-cs-lab"
+rootProject.name = "io.github.shineyrbl-byte.core-cs-lab"

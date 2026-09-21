@@ -10,7 +10,7 @@ A BOSS plugin that gives AI agents, and the students working with them, small ve
 
 Checks whether a database transaction schedule is conflict-serializable.
 
-Tool name in BOSS: `mcp__com_example_core_cs_lab__check_schedule`
+Tool name in BOSS: `mcp__io_github_shineyrbl_byte_core_cs_lab__check_schedule`
 
 Input: `schedule`, operations separated by spaces. R = read, W = write, the number is the transaction, the letter is the data item.
 
@@ -28,7 +28,7 @@ Errors: a malformed operation returns an error result naming the bad token, and 
 
 Detects deadlock in a sequence of lock requests using a wait-for graph.
 
-Tool name in BOSS: `mcp__com_example_core_cs_lab__detect_deadlock`
+Tool name in BOSS: `mcp__io_github_shineyrbl_byte_core_cs_lab__detect_deadlock`
 
 Input: `locks`, lock requests separated by spaces. LS = shared lock, LX = exclusive lock, the number is the transaction, the letter is the data item.
 
@@ -46,7 +46,7 @@ Assumptions: locks are never released during the sequence, a transaction that is
 
 Classifies a transaction schedule with commits as strict, cascadeless, recoverable or not recoverable.
 
-Tool name in BOSS: `mcp__com_example_core_cs_lab__check_recoverability`
+Tool name in BOSS: `mcp__io_github_shineyrbl_byte_core_cs_lab__check_recoverability`
 
 Input: `schedule`, operations separated by spaces. R = read, W = write, C = commit, the number is the transaction, the letter is the data item.
 

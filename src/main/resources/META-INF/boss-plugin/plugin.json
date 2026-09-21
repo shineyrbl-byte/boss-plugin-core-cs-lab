@@ -1,11 +1,11 @@
 {
-    "pluginId": "com.example.core-cs-lab",
+    "pluginId": "io.github.shineyrbl-byte.core-cs-lab",
     "displayName": "core-cs-lab",
     "version": "0.1.0",
     "apiVersion": "1.0.93",
-    "mainClass": "com.example.corecslab.CoreCsLabPlugin",
+    "mainClass": "io.github.shineyrblbyte.corecslab.CoreCsLabPlugin",
     "description": "BossConsole plugin for core-cs-lab (mcp-tool template)",
-    "author": "Boss Developer",
+    "author": "shineyrbl-byte",
     "license": "Apache-2.0",
     "manifestVersion": 1,
     "systemPlugin": false,
@@ -13,22 +13,22 @@
     "requiredPermissions": [],
     "mcpTools": [
         {
-            "name": "mcp__com_example_core_cs_lab__lab_ping",
+            "name": "mcp__io_github_shineyrbl_byte_core_cs_lab__lab_ping",
             "description": "Simple connectivity test for the Core CS Lab plugin",
             "adminOnly": false
         },
         {
-            "name": "mcp__com_example_core_cs_lab__check_schedule",
+            "name": "mcp__io_github_shineyrbl_byte_core_cs_lab__check_schedule",
             "description": "Checks whether a database transaction schedule is conflict-serializable",
             "adminOnly": false
         },
         {
-            "name": "mcp__com_example_core_cs_lab__detect_deadlock",
+            "name": "mcp__io_github_shineyrbl_byte_core_cs_lab__detect_deadlock",
             "description": "Detects deadlock in a sequence of lock requests using a wait-for graph",
             "adminOnly": false
         },
         {
-            "name": "mcp__com_example_core_cs_lab__check_recoverability",
+            "name": "mcp__io_github_shineyrbl_byte_core_cs_lab__check_recoverability",
             "description": "Classifies a transaction schedule with commits as strict, cascadeless, recoverable or not recoverable",
             "adminOnly": false
         }
