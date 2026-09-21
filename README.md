@@ -1,5 +1,7 @@
 # core-cs-lab
 
+[![build](https://github.com/shineyrbl-byte/boss-plugin-core-cs-lab/actions/workflows/build.yml/badge.svg)](https://github.com/shineyrbl-byte/boss-plugin-core-cs-lab/actions/workflows/build.yml)
+
 A BOSS plugin that gives AI agents, and the students working with them, small verifiable computer science lab tools. Built for the BOSS Contributor Hackathon 2026 (Apply track).
 
 ## Tools
