@@ -84,4 +84,4 @@ Unit tests cover the parser, graph, checker, formatter and the tool handler. The
 
 ## Planned
 
-A networks lab (lossy link simulator for reliable transfer protocols) and an OS lab (scheduling and page replacement). Not implemented yet.
+Two more labs are sketched but not built yet: a networks lab (a lossy-link simulator for reliable transfer protocols like stop-and-wait or go-back-N) and an OS lab (CPU scheduling and page replacement algorithms). Neither is part of this submission.
